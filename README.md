@@ -52,10 +52,8 @@
       
 <br>
 
-- #### 3. Secure "tcp no data connection vulnerability"
-  <pre><code>
-  // https://github.com/ENNP/SOA/blob/main/soa_file/run/start.c
-  while(1){
+- #### 3. Secure "tcp no data connection vulnerability" ( [start.c](https://github.com/ENNP/SOA/blob/main/soa_file/run/start.c) )
+  <pre><code>while(1){
 
 		system("pkill -9 run");
 		system("./run &");
