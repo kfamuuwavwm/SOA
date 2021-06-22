@@ -35,7 +35,8 @@
 ## Security & optimization
 - #### 1. switch ( ascii )
   - Check ascii code
-    - Enhanced security by converting incoming input values to ascii code
+    - First security : Enhanced security by converting incoming input values to ascii code
+    - Second Security : Check string one more time
 
       ![](https://github.com/ENNP/soa/blob/main/readme/3.PNG)
 
