@@ -1,0 +1,1 @@
+chmod 777 build soa.sh start stop chmod.sh

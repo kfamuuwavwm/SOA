@@ -1,0 +1,46 @@
+
+
+            default:
+            {
+               write( cs , error , sizeof(error) );
+               close(cs);
+               status_code += 1;
+               break;
+            }
+         }
+      }  
+
+      else{
+         write( cs , error , sizeof(error) );
+         close(cs);
+         status_code += 1;
+      }
+
+      FILE *access = fopen("access.log","a");
+
+      time_t t = time(NULL);
+      struct tm tm = *localtime(&t);
+
+      if (status_code == 1){
+
+         sprintf(access_log,"%d-%d-%d %d:%d:%d - %s - 404 - %s %s",tm.tm_year+1900, tm.tm_mon+1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec, inet_ntoa(client_addr.sin_addr), strcut_arr[0], strcut_arr[1]);
+
+      }
+
+      else{
+         sprintf(access_log,"%d-%d-%d %d:%d:%d - %s - 200 - %s %s",tm.tm_year+1900, tm.tm_mon+1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec, inet_ntoa(client_addr.sin_addr), strcut_arr[0], strcut_arr[1]);
+      }
+
+      fputs(access_log,access);
+
+      fputs("\n",access);
+      fclose(access);
+
+      strcut2_add = 0;
+      status_code = 0;
+
+   }
+
+   return 0;
+
+}

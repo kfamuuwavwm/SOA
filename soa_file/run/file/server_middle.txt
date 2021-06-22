@@ -1,0 +1,48 @@
+);
+   server_addr.sin_addr.s_addr= htonl(INADDR_ANY);
+
+   if( bind( ss, (struct sockaddr*) &server_addr, sizeof( server_addr) ) == -1 ){
+      // Use it to debug.
+   }
+
+   if( listen(ss, 1) == -1 ){
+      // Use it to debug.
+   }
+
+   while(1){
+
+      pid_t pid;
+      pid = fork();      
+
+      client_addr_size  = sizeof(client_addr);
+      cs = accept( ss, ( struct sockaddr* ) &client_addr, &client_addr_size);
+
+      if ( cs == -1 ){
+         // Use it to debug.
+      }
+
+      read ( cs, buff_rcv, 1024);
+      strcut0 = strtok(buff_rcv, " ");
+
+      for( strcut_i = 0 ; strcut_i <= 1 ; strcut_i++ ){
+
+         strcpy(strcut_arr[strcut_i],strcut0);
+
+         strcut0 = strtok(NULL, " ");
+
+      }
+
+      if ( strcmp(strcut_arr[0],"GET") == 0 ){
+
+         status_code = 0;
+
+         strcut2_len = strlen(strcut_arr[1]);
+
+         for( strcut2_for = 0 ; strcut2_for <= strcut2_len ; strcut2_for++ ){
+
+            strcut2_add += strcut_arr[1][strcut2_for];
+
+         }
+         
+
+         switch(strcut2_add){   

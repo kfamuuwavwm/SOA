@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+
+#include "error.h"
+
+int main(){
+
+   int   ss;
+   int   cs;
+   int   client_addr_size;
+   int   setsock_option = 1; 
+   int   strcut_i;
+   int   strcut2_len;
+   int   strcut2_for;
+   int   strcut2_add=0;
+   int   f_size;
+   int   status_code;
+
+   struct sockaddr_in   server_addr;
+   struct sockaddr_in   client_addr;
+
+   char   buff_rcv[1024];
+   char * strcut0;
+   char * strcut2;
+   char strcut_arr[1][100] = {0,};
+   char * file_buffer;
+   char   access_log[1024];
+
+   ss = socket( AF_INET, SOCK_STREAM , 0);
+   if( ss == -1 ){
+      // Use it to debug.
+   }
+
+   setsockopt( ss, SOL_SOCKET, SO_REUSEADDR, &setsock_option, sizeof(setsock_option) );
+
+   memset( &server_addr, 0, sizeof( server_addr));
+   server_addr.sin_family     = AF_INET;
+   server_addr.sin_port       = htons(
