@@ -52,6 +52,20 @@
       
 <br>
 
+- #### 3. Secure "tcp no data connection vulnerability"
+  <pre><code>
+  // https://github.com/ENNP/SOA/blob/main/soa_file/run/start.c
+  while(1){
+
+		system("pkill -9 run");
+		system("./run &");
+		sleep(10);
+
+  } 
+  </code></pre>
+  
+<br>
+
 ## Thanks
 - #### Sample Web Server ( front_end.zip )
   - Read Only by HTML5 UP
