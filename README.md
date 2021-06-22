@@ -25,7 +25,7 @@
 
 <br>
 
-- #### 2. Run & Stop
+- #### 2. Run & Stop ( Required python 2.7 )
 <p align="center">    
     <img src="https://github.com/ENNP/soa/blob/main/readme//how_to_soa.gif" width="770" >
 </p>
