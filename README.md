@@ -7,7 +7,7 @@
 <br>
 
 # SOA
-**Automatically convert to a secure web server with html, css, js, img, etc.**
+**Automatically convert to a secure C-lang web server with html, css, js, img, etc.**
 
 - SOA is simple to use.
 - SOA servers are developed in the C language, they are fast to process.
