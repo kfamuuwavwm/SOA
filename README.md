@@ -42,7 +42,7 @@
 
 <br>
 
-- #### 2. Attach HTTP Header Dictionary to File
+- #### 2. Preattach HTTP Header to File
   - TCP/IP & HTTP Comprehension Required 
     - Pre-attach HTTP headers and files
     - SOA does not put HTTP headers every time, but puts them in advance.
