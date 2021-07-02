@@ -44,7 +44,6 @@
 
 - #### 2. Preattach HTTP Header to File
   - TCP/IP & HTTP Comprehension Required 
-    - Pre-attach HTTP headers and files
     - SOA does not put HTTP headers every time, but puts them in advance.
 
       ![](https://github.com/ENNP/soa/blob/main/readme/4.PNG)
