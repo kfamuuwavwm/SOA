@@ -1,7 +1,7 @@
 <br>
 
 <p align="center">
-    <img src="https://github.com/2P3/soa/blob/main/readme/1.PNG" width="400">    
+    <img src="https://github.com/ENNP/soa/blob/main/readme/1.PNG" width="400">    
 </p>
 
 <br>
@@ -27,7 +27,7 @@
 
 - #### 2. Run & Stop ( Required python 2.7 )
 <p align="center">    
-    <img src="https://github.com/2P3/soa/blob/main/readme//how_to_soa.gif" width="770" >
+    <img src="https://github.com/ENNP/soa/blob/main/readme//how_to_soa.gif" width="770" >
 </p>
 
 <br>
@@ -38,7 +38,7 @@
     - First security : Enhanced security by converting incoming input values to ascii code
     - Second Security : Check string one more time
 
-      ![](https://github.com/2P3/soa/blob/main/readme/3.PNG)
+      ![](https://github.com/ENNP/soa/blob/main/readme/3.PNG)
 
 <br>
 
@@ -46,13 +46,13 @@
   - TCP/IP & HTTP Comprehension Required 
     - SOA does not put HTTP headers every time, but puts them in advance.
 
-      ![](https://github.com/2P3/soa/blob/main/readme/4.PNG)
+      ![](https://github.com/ENNP/soa/blob/main/readme/4.PNG)
       
-      ![](https://github.com/2P3/soa/blob/main/readme/5.PNG)
+      ![](https://github.com/ENNP/soa/blob/main/readme/5.PNG)
       
 <br>
 
-- #### 3. Secure "tcp no data connection vulnerability" ( [start.c](https://github.com/2P3/SOA/blob/main/soa_file/run/start.c) )
+- #### 3. Secure "tcp no data connection vulnerability" ( [start.c](https://github.com/ENNP/SOA/blob/main/soa_file/run/start.c) )
   <pre><code>while(1){
 
 		system("pkill -9 run");
